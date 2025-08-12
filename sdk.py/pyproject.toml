@@ -1,0 +1,7 @@
+[project]
+name = "phantomwall"
+version = "0.0.1"
+description = "PhantomWall Python SDK – prompt-injection firewall wrapper"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31.0"]
