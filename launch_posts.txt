@@ -1,0 +1,3 @@
+Product Hunt title: PhantomWall — Open-source prompt-injection firewall for AI apps
+Tagline: Ship AI safely in 5 minutes.
+HN post title: Show HN: PhantomWall — Open-source prompt-injection firewall for AI apps

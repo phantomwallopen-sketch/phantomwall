@@ -1,0 +1,12 @@
+Subject: We built the missing AI safety layer — growing fast
+
+Hi [Name],
+
+I just launched PhantomWall — an open-source prompt-injection firewall + telemetry for AI apps and agents.
+In 48 hours, we've had [X] GitHub stars, [Y] installs, and [Z] design partners.
+
+We offer a one-line integration to block prompt injection and data exfiltration attacks.
+
+Happy to share the deck, dataset, and live demo.
+
+— [Your Name]
