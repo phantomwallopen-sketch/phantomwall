@@ -1,0 +1,8 @@
+{
+  "name": "@phantomwall/llm",
+  "version": "0.0.1",
+  "description": "PhantomWall SDK (JS) \u2013 prompt-injection firewall wrapper",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT"
+}
