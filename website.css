@@ -1,0 +1,134 @@
+/* --------- PhantomWall Fancy SaaS Styles --------- */
+:root{
+  --bg:#0b0c10;           /* page background */
+  --card:#121318;         /* cards/sections */
+  --text:#e6e7eb;         /* main text */
+  --muted:#a8acb8;        /* secondary text */
+  --brand1:#7c5cff;       /* brand gradient start */
+  --brand2:#00e3a1;       /* brand gradient end */
+  --accent:#2bd4ff;       /* small highlights */
+  --border:rgba(255,255,255,.08);
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --radius:20px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 70% -10%, rgba(124,92,255,.25), transparent 60%),
+              radial-gradient(1000px 600px at 0% 0%, rgba(0,227,161,.15), transparent 50%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* --------- Header / Hero --------- */
+header{
+  padding:72px 24px 40px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+header::before{
+  content:"";
+  position:absolute; inset:-2px;
+  background: radial-gradient(600px 220px at 50% -10%, rgba(255,255,255,.08), transparent 70%);
+  pointer-events:none;
+}
+.brand{
+  display:inline-flex; align-items:center; gap:12px;
+  padding:10px 14px; border:1px solid var(--border);
+  border-radius:999px; background:rgba(255,255,255,.03);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+  font-size:14px; color:var(--muted);
+}
+.brand .dot{
+  width:10px; height:10px; border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, var(--brand2), var(--brand1));
+  box-shadow: 0 0 14px rgba(0,227,161,.6), 0 0 20px rgba(124,92,255,.45) inset;
+}
+h1{
+  font-size: clamp(40px, 6vw, 64px);
+  line-height:1.1; margin:18px 0 12px;
+  letter-spacing:-.02em;
+  background: linear-gradient(92deg, var(--brand1), var(--brand2));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.tagline{
+  font-size: clamp(16px, 2.4vw, 20px);
+  color:var(--muted);
+  max-width: 780px; margin: 0 auto;
+}
+
+.cta-row{margin-top:26px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 18px; border-radius:12px; text-decoration:none;
+  font-weight:600; color:#0b0c10; background:#fff;
+  transition: transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 6px 20px rgba(255,255,255,.08);
+}
+.btn:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(255,255,255,.12) }
+.btn-ghost{
+  background: linear-gradient(92deg, var(--brand1), var(--brand2));
+  color:#0b0c10;
+}
+.btn-outline{
+  color:var(--text); background: transparent; border:1px solid var(--border);
+}
+
+/* --------- Main Sections --------- */
+main{max-width:1120px; margin:0 auto; padding: 8px 16px 60px}
+.section{margin:36px 0; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border:1px solid var(--border); border-radius: var(--radius); padding:26px; box-shadow: var(--shadow);}
+
+.grid{
+  display:grid; gap:18px;
+  grid-template-columns: repeat(12, 1fr);
+}
+.card{
+  grid-column: span 12;
+  background: var(--card); border:1px solid var(--border);
+  border-radius:16px; padding:18px 18px;
+}
+@media (min-width: 760px){
+  .card{ grid-column: span 6; }
+}
+.card h3{ margin:6px 0 6px; font-size:18px }
+.card p{ color:var(--muted); margin:0 }
+
+.kicker{
+  display:inline-block;
+  font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); margin-bottom:8px;
+}
+
+/* --------- Code Demo --------- */
+pre{
+  background:#0f1117; color:#e6e7eb; border:1px solid var(--border);
+  border-radius:14px; padding:14px; overflow:auto;
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+code{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace }
+
+/* --------- Footer --------- */
+footer{
+  padding:32px 20px; text-align:center; color:var(--muted);
+  border-top:1px solid var(--border); margin-top:24px;
+}
+
+/* --------- Fun glow divider --------- */
+.hr-glow{
+  height:1px; border:none; background: linear-gradient(90deg, transparent, rgba(124,92,255,.6), rgba(0,227,161,.6), transparent);
+  margin: 26px 0;
+}
+
+/* --------- Smooth appear animation --------- */
+.reveal{ opacity:0; transform: translateY(10px); animation: rise .5s ease forwards }
+.reveal:nth-child(2){ animation-delay:.05s }
+.reveal:nth-child(3){ animation-delay:.1s }
+@keyframes rise{ to{ opacity:1; transform: translateY(0) } }
